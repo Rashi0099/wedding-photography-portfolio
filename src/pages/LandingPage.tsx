@@ -1,0 +1,102 @@
+import React, { useEffect, useState } from "react";
+import HeroSection from "../components/hero/HeroSection";
+import AboutSection from "../components/about/AboutSection";
+import ServicesSection from "../components/services/ServicesSection";
+import ProcessFaqSection from "../components/services/ProcessFaqSection";
+import PortfolioSection from "../components/portfolio/PortfolioSection";
+import StickyGallery from "../components/gallery/StickyGallery";
+import TestimonialsSection from "../components/testimonials/TestimonialsSection";
+import DestinationsSection from "../components/destinations/DestinationsSection";
+import DirectorNoteSection from "../components/director/DirectorNoteSection";
+import ContactSection from "../components/contact/ContactSection";
+import Footer from "../components/shared/Footer";
+import VideoModal from "../components/shared/VideoModal";
+
+import { projects, categories, services, testimonials } from "../data/mockData";
+import { Project, ContactFormState } from "../types";
+
+const SectionGap: React.FC = () => (
+  <div className="w-full h-16 sm:h-24 lg:h-32 bg-[#080B09] flex items-center justify-center pointer-events-none select-none">
+    <div className="w-full max-w-7xl px-5 sm:px-8">
+      <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-[#F1EDE3]/[0.08] to-transparent" />
+    </div>
+  </div>
+);
+
+const LandingPage: React.FC = () => {
+  const [selectedVideo, setSelectedVideo] = useState<Project | null>(null);
+  const [contactPrefill, setContactPrefill] = useState<Partial<ContactFormState> | null>(null);
+
+  useEffect(() => {
+    document.title = "FrameStory Studios — Photography & Videography";
+  }, []);
+
+  const scrollToSection = (id: string): void => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleInquireDestination = (destination: string): void => {
+    setContactPrefill({ message: `Inquiring about destination shoot coverage for ${destination}.\n\n` });
+    scrollToSection("contact");
+  };
+
+  const handleSelectService = (category: string): void => {
+    setContactPrefill({ project_type: category, message: `Inquiring about ${category} coverage.` });
+    scrollToSection("contact");
+  };
+
+  return (
+    <main className="bg-[#080B09] text-[#F1EDE3]">
+      <HeroSection
+        onExploreClick={() => scrollToSection("work")}
+        onBookClick={() => scrollToSection("contact")}
+      />
+
+      <SectionGap />
+
+      <AboutSection />
+
+      <SectionGap />
+
+      <ServicesSection onSelectService={handleSelectService} />
+
+      <SectionGap />
+
+      <PortfolioSection
+        projects={projects}
+        categories={categories}
+        onSelectProject={(project: Project) => setSelectedVideo(project)}
+      />
+
+      <SectionGap />
+
+      <StickyGallery />
+
+      <SectionGap />
+
+      <TestimonialsSection testimonials={testimonials} />
+
+      <SectionGap />
+
+      <DestinationsSection onInquireDestination={handleInquireDestination} />
+
+      <SectionGap />
+
+      <DirectorNoteSection onCommissionClick={() => scrollToSection("contact")} />
+
+      <SectionGap />
+
+      <ProcessFaqSection />
+      
+      <SectionGap />
+
+      <ContactSection prefill={contactPrefill} />
+
+      <Footer />
+
+      <VideoModal project={selectedVideo} onClose={() => setSelectedVideo(null)} />
+    </main>
+  );
+};
+
+export default LandingPage;
