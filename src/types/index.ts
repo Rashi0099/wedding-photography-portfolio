@@ -10,6 +10,9 @@ export interface Project {
   category: Category;
   thumbnail: string;
   video_url?: string;
+  video_embed_url?: string;
+  client_name?: string;
+  description?: string;
 }
 
 export interface TeamMember {
@@ -38,5 +41,6 @@ export interface ContactFormState {
   email: string;
   phone: string;
   project_type: string;
+  budget_range?: string;
   message: string;
 }

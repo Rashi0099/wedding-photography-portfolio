@@ -42,7 +42,7 @@ const PricingSection: React.FC<Props> = ({ onBookClick }) => {
       cardsRef.current.forEach((card, i) => {
         if (!card) return;
         gsap.fromTo(card, { opacity: 0, y: 60 },
-          { opacity: 1, y: 0, duration: 0.7, delay: i * 0.12, ease: [0.16, 1, 0.3, 1],
+          { opacity: 1, y: 0, duration: 0.7, delay: i * 0.12, ease: "power2.out",
             scrollTrigger: { trigger: card, start: "top 85%", once: true } });
       });
     }, sectionRef);
@@ -67,7 +67,7 @@ const PricingSection: React.FC<Props> = ({ onBookClick }) => {
           {PLANS.map((plan, i) => (
             <div
               key={plan.id}
-              ref={(el) => (cardsRef.current[i] = el)}
+              ref={(el) => { cardsRef.current[i] = el; }}
               className={`relative rounded-2xl overflow-hidden flex flex-col transition-all duration-300 ${
                 plan.popular
                   ? "bg-[#F1EDE3] text-[#080B09] shadow-2xl shadow-black/40 scale-[1.02] md:scale-[1.04]"

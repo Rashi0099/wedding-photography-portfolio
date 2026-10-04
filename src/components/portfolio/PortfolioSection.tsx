@@ -5,7 +5,15 @@ import { Project, Category } from "../../types";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const FALLBACK_SLIDES = [
+interface SlideItem {
+  id: string | number;
+  img: string;
+  title: string;
+  category: string;
+  project?: Project;
+}
+
+const FALLBACK_SLIDES: SlideItem[] = [
   { id: "f1", img: "/images/gallery/bts.jpg",        title: "Behind the Scenes",    category: "BTS" },
   { id: "f2", img: "/images/gallery/wedding.jpg",     title: "Wedding Cinema",       category: "Wedding" },
   { id: "f3", img: "/images/gallery/backwaters.jpg",  title: "Kerala Backwaters",    category: "Aerial" },
@@ -27,9 +35,9 @@ const PortfolioSection: React.FC<Props> = ({ projects, onSelectProject }) => {
   const [isHovered, setIsHovered] = useState(false);
   const trackRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  const slides = projects.length > 0
+  const slides: SlideItem[] = projects.length > 0
     ? projects.map((p) => ({
         id: p.id,
         img: p.thumbnail,

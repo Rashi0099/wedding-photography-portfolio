@@ -10,7 +10,7 @@ interface Props {
 }
 
 export default function HeroSection({ onExploreClick }: Props) {
-  const scrollHintRef = useRef<HTMLButtonElement>(null);
+  const scrollHintRef = useRef<HTMLDivElement>(null);
   const heroScrollWrapperRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);

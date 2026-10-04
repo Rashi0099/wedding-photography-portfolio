@@ -31,7 +31,7 @@ const VideoModal: React.FC<Props> = ({ project, onClose }) => {
     return url;
   };
 
-  const embed = getEmbed(project.video_embed_url);
+  const embed = getEmbed(project.video_url || project.video_embed_url);
   const thumb = project.thumbnail;
 
   return (

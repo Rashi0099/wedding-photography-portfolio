@@ -21,7 +21,7 @@ const INITIAL_FORM: ContactFormState = {
 type FormErrors = Partial<Record<keyof ContactFormState, string>>;
 type Status = "idle" | "sending" | "success" | "error";
 
-interface Props { prefill?: Partial<ContactFormState>; }
+interface Props { prefill?: Partial<ContactFormState> | null; }
 
 const ContactSection: React.FC<Props> = ({ prefill }) => {
   const sectionRef              = useRef<HTMLElement>(null);
