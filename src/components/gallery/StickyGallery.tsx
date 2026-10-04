@@ -99,7 +99,7 @@ const StickyGallery: React.FC = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} id="gallery" className="sticky-gallery-section scroll-mt-20 section-content-auto">
+    <section ref={sectionRef} id="gallery" className="sticky-gallery-section scroll-mt-20">
       <div className="sticky-gallery-header">
         <p className="sticky-eyebrow">Visual Journal</p>
         <h2 className="sticky-title">

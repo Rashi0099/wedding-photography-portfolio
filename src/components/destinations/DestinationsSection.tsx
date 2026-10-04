@@ -83,7 +83,7 @@ const DestinationsSection: React.FC<Props> = ({ onInquireDestination }) => {
   return (
     <section
       id="destinations"
-      className="py-16 sm:py-24 px-5 sm:px-8 bg-[#080B09] relative overflow-hidden scroll-mt-20 section-content-auto"
+      className="py-16 sm:py-24 px-5 sm:px-8 bg-[#080B09] relative overflow-hidden scroll-mt-20"
     >
       {/* Background ambient lighting */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-[#67685D]/10 rounded-full blur-[140px] pointer-events-none" />

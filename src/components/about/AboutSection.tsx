@@ -42,7 +42,7 @@ const AboutSection: React.FC = () => {
     <section
       ref={sectionRef}
       id="about"
-      className="py-16 sm:py-20 lg:py-20 px-5 sm:px-8 bg-[#080B09] scroll-mt-20 relative overflow-hidden section-content-auto"
+      className="py-16 sm:py-20 lg:py-20 px-5 sm:px-8 bg-[#080B09] scroll-mt-20 relative overflow-hidden"
     >
       {/* Subtle ambient glow */}
       <div className="absolute top-1/4 -left-48 w-96 h-96 bg-[#F1EDE3]/[0.02] rounded-full blur-[140px] pointer-events-none" />

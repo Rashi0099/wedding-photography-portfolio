@@ -10,7 +10,7 @@ const FAQS = [
 
 const ProcessFaqSection: React.FC = () => {
   return (
-    <section id="faq" className="py-24 px-5 sm:px-8 bg-[#080B09] scroll-mt-20 section-content-auto">
+    <section id="faq" className="py-24 px-5 sm:px-8 bg-[#080B09] scroll-mt-20">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
           <p className="text-[11px] font-sans font-bold uppercase tracking-[0.25em] text-[#A8A499] mb-2">

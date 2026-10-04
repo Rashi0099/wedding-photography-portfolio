@@ -87,7 +87,7 @@ export default function HeroSection({ onExploreClick }: Props) {
       {/* Centered Hero Content with Scroll Scrub & Entrance Animations */}
       <div
         ref={heroScrollWrapperRef}
-        className="relative z-10 text-center px-4 sm:px-6 w-full max-w-7xl mx-auto flex flex-col items-center select-none will-change-transform"
+        className="relative z-10 text-center px-4 sm:px-6 w-full max-w-7xl mx-auto flex flex-col items-center select-none"
       >
         <h1
           ref={titleRef}

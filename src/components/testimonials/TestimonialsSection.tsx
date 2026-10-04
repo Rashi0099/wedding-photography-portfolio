@@ -18,7 +18,7 @@ const TestimonialsSection: React.FC<Props> = ({ testimonials }) => {
   const marqueeList = [...testimonials, ...testimonials];
 
   return (
-    <section className="py-16 sm:py-20 bg-[#080B09] text-[#F1EDE3] overflow-hidden relative section-content-auto">
+    <section className="py-16 sm:py-20 bg-[#080B09] text-[#F1EDE3] overflow-hidden relative">
       {/* Section Header */}
       <div className="max-w-7xl mx-auto px-5 sm:px-8 mb-10 text-center">
         <p className="text-[10px] font-sans font-bold uppercase tracking-[0.25em] text-[#8D8B82] mb-2">

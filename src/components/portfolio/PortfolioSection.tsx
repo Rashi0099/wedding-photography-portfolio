@@ -180,7 +180,7 @@ const PortfolioSection: React.FC<Props> = ({ projects, onSelectProject }) => {
   }, []);
 
   return (
-    <section ref={sectionRef} id="work" className="py-14 sm:py-18 lg:py-16 bg-[#080B09] scroll-mt-20 overflow-hidden section-content-auto">
+    <section ref={sectionRef} id="work" className="py-14 sm:py-18 lg:py-16 bg-[#080B09] scroll-mt-20 overflow-hidden">
       <div className="gallery-header max-w-7xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 sm:mb-10">
         <div>
           <div className="flex items-center gap-2 mb-1.5">

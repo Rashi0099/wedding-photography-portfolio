@@ -7,7 +7,7 @@
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     background-color: #080B09;
     color: #F1EDE3;
-    overflow-x: hidden;
+    overflow-x: clip;
     letter-spacing: -0.01em;
   }
 
@@ -207,7 +207,6 @@
   padding: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  will-change: transform;
 }
 
 @media (hover: hover) {
@@ -256,7 +255,6 @@
   object-fit: cover;
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
   filter: saturate(0.85) contrast(1.05);
-  will-change: transform;
 }
 
 @media (hover: hover) {
@@ -377,7 +375,6 @@
   display: flex;
   width: max-content;
   animation: marquee 48s linear infinite;
-  will-change: transform;
 }
 
 .animate-marquee:hover {
@@ -398,15 +395,6 @@
 
 .animate-luxury-float {
   animation: luxuryFloat 2.2s ease-in-out infinite;
-  will-change: transform;
-}
-
-/* ═══════════════════════════════════════════════════
-   OFF-SCREEN RENDERING OPTIMIZATION (MOBILE & TBT)
-   ═══════════════════════════════════════════════════ */
-.section-content-auto {
-  content-visibility: auto;
-  contain-intrinsic-size: 1px 700px;
 }
 
 /* ═══════════════════════════════════════════════════

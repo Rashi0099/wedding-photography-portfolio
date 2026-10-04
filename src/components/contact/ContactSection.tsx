@@ -58,7 +58,7 @@ const ContactSection: React.FC<Props> = ({ prefill }) => {
     `w-full bg-[#111412] border ${errors[field] ? "border-red-500/50" : "border-[#F1EDE3]/8 focus:border-[#F1EDE3]/30"} px-4 py-3.5 rounded-xl text-[#F1EDE3] placeholder-[#67685D] focus:outline-none transition-colors text-base sm:text-sm`;
 
   return (
-    <section ref={sectionRef} id="contact" className="py-24 px-5 sm:px-8 bg-[#080B09] text-[#F1EDE3] relative overflow-hidden scroll-mt-20 section-content-auto">
+    <section ref={sectionRef} id="contact" className="py-24 px-5 sm:px-8 bg-[#080B09] text-[#F1EDE3] relative overflow-hidden scroll-mt-20">
 
       <div className="max-w-5xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -66,7 +66,7 @@ const ContactSection: React.FC<Props> = ({ prefill }) => {
           {/* Sidebar */}
           <motion.div
             initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }} transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true, margin: "120px" }} transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-5 space-y-7"
           >
             <div>
@@ -101,7 +101,7 @@ const ContactSection: React.FC<Props> = ({ prefill }) => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "120px" }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-7"
           >

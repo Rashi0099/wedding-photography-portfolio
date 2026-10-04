@@ -52,7 +52,7 @@ const DirectorNoteSection: React.FC<Props> = () => {
     <section
       ref={sectionRef}
       id="director"
-      className="py-16 sm:py-28 px-5 sm:px-10 bg-[#080B09] relative overflow-hidden scroll-mt-20 flex items-center justify-center section-content-auto"
+      className="py-16 sm:py-28 px-5 sm:px-10 bg-[#080B09] relative overflow-hidden scroll-mt-20 flex items-center justify-center"
     >
       {/* Subtle ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#67685D]/10 rounded-full blur-[140px] pointer-events-none" />

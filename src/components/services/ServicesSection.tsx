@@ -140,7 +140,7 @@ const ServicesSection: React.FC<Props> = ({ onSelectService }) => {
     <section
       ref={sectionRef}
       id="services"
-      className="py-12 sm:py-16 lg:py-12 px-5 sm:px-8 bg-[#080B09] scroll-mt-20 flex flex-col justify-center section-content-auto"
+      className="py-12 sm:py-16 lg:py-12 px-5 sm:px-8 bg-[#080B09] scroll-mt-20 flex flex-col justify-center"
     >
       <div className="max-w-7xl mx-auto w-full">
         
